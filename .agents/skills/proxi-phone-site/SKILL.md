@@ -61,3 +61,10 @@ Format : `<img src="assets/pictogrammes/picto-xxx.png" alt="...">` dans un conte
 
 ## Vérification (obligatoire avant de conclure)
 `node .agents/skills/proxi-phone-site/scripts/verify.js` — 5 pages × 375/360/320px : images cassées, erreurs JS, débordement horizontal, vrai clic sur l'icône du burger, statut d'ouverture. Doit afficher « Tout est OK ».
+
+## Déploiement & Releases GitHub
+- Dépôt : `https://github.com/kylian-tht/site-proxi-phone` (Public)
+- GitHub Pages activé sur branche `main` (racine `/`) : `https://kylian-tht.github.io/site-proxi-phone/`
+- Pour publier une nouvelle release automatique :
+  1. Commit et push git (`git add .`, `git commit -m "..."`, `git push origin main`)
+  2. Appel API GitHub POST `/repos/kylian-tht/site-proxi-phone/releases` avec tag incrémenté (`v1.1.0`, etc.) et corps descriptif des nouveautés.
