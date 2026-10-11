@@ -1,0 +1,8 @@
+# Sources lourdes et palettes brutes
+_sources/
+*.tmp
+*.log
+
+# Dossiers système
+.DS_Store
+Thumbs.db
