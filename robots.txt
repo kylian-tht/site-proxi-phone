@@ -1,0 +1,13 @@
+# Robots.txt pour PROXI-PHONE Vitré (https://proxi-phone.fr)
+User-agent: *
+Allow: /
+
+# Bloquer l'indexation des scripts et fichiers techniques
+Disallow: /send-mail.php
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /.agents/
+Disallow: /_sources/
+
+# Fichier Sitemap XML officiel
+Sitemap: https://proxi-phone.fr/sitemap.xml

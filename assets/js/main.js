@@ -168,8 +168,15 @@ function initDevisForm() {
     const message = form.querySelector('[name="message"]').value.trim();
     const device = deviceInput ? deviceInput.value : 'Appareil non spécifié';
 
+    const rgpd = (document.getElementById('devisRgpd') || {}).checked;
+
     if (!name || !phone) {
       alert('Veuillez renseigner votre nom et votre numéro de téléphone pour être rappelé.');
+      return;
+    }
+
+    if (!rgpd) {
+      alert('Veuillez accepter la politique de traitement des données pour soumettre votre demande de devis.');
       return;
     }
 
@@ -223,12 +230,24 @@ function initContactForm() {
     const email = (form.querySelector('[name="email"]') || {}).value?.trim() || '';
     const message = (form.querySelector('[name="message"]') || {}).value?.trim() || '';
     const website = (form.querySelector('[name="website"]') || {}).value || '';
+    const rgpd = (form.querySelector('[name="rgpd"]') || {}).checked;
 
     if (!nom || !telephone || !message) {
       if (alertBox) {
         alertBox.innerHTML = `
           <div style="padding:14px 18px; border-radius:var(--radius-md); background:#fee2e2; border:1px solid #fca5a5; color:#991b1b; font-size:0.92rem;">
             Veuillez renseigner votre nom, votre numéro de téléphone et votre message.
+          </div>`;
+        alertBox.style.display = 'block';
+      }
+      return;
+    }
+
+    if (!rgpd) {
+      if (alertBox) {
+        alertBox.innerHTML = `
+          <div style="padding:14px 18px; border-radius:var(--radius-md); background:#fee2e2; border:1px solid #fca5a5; color:#991b1b; font-size:0.92rem;">
+            Veuillez cocher la case d'acceptation de la politique de traitement des données pour continuer.
           </div>`;
         alertBox.style.display = 'block';
       }
@@ -247,6 +266,7 @@ function initContactForm() {
       formData.append('email', email);
       formData.append('message', message);
       formData.append('website', website);
+      formData.append('rgpd', '1');
 
       const response = await fetch('send-mail.php', {
         method: 'POST',

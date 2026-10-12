@@ -37,6 +37,16 @@ if (empty($nom) || empty($telephone) || empty($message)) {
     exit;
 }
 
+// Validation du consentement RGPD
+if (empty($_POST['rgpd'])) {
+    http_response_code(400);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Veuillez accepter la politique de traitement des données pour envoyer votre message.'
+    ]);
+    exit;
+}
+
 // Validation basique de l'email s'il est renseigné
 if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
