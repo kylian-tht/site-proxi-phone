@@ -334,12 +334,16 @@ function initScrollTop() {
    5. NAVIGATION ACTIVE
    ========================================================================== */
 function highlightActiveNav() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  let currentPath = window.location.pathname.split('/').pop() || 'index';
+  currentPath = currentPath.replace('.html', '');
+  if (!currentPath) currentPath = 'index';
+
   const links = document.querySelectorAll('.nav-link');
 
   links.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    let href = link.getAttribute('href') || '';
+    href = href.split('#')[0].replace('.html', '');
+    if (href === currentPath || (currentPath === 'index' && (href === '' || href === 'index'))) {
       link.classList.add('active');
     }
   });
