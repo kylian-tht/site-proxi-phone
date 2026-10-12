@@ -25,75 +25,89 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           <span>26 Rue de la Poterie, 35500 Vitré</span>
         </div>
-        <div class="topbar-divider"></div>
-        <div class="status-badge closed">
-          <span class="status-dot"></span>
-          <span>Calcul des horaires...</span>
+        <div class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span class="status-badge closed"><span class="status-dot"></span><span>Calcul en cours...</span></span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- HEADER NAVIGATION -->
+  <!-- Header -->
   <header class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="site-logo" title="PROXI-PHONE Vitré - Réparation Téléphones & Informatique">
-        <img src="assets/logo/logo-compact-horizontal.png" alt="PROXI-PHONE Vitré" class="logo-header-img" width="419" height="163">
-      </a>
-
-      <nav class="main-nav" aria-label="Navigation principale">
-        <ul class="nav-links">
-          <li class="has-dropdown">
-            <a href="index.html">Accueil <svg class="dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html#pannes">Les pannes les plus courantes</a></li>
-              <li><a href="index.html#pourquoi-nous">Pourquoi confier votre appareil chez PROXI-PHONE</a></li>
-              <li><a href="index.html#avis">Avis clients vérifiés</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <a href="services.html">Services & Pannes <svg class="dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-            <ul class="dropdown-menu">
-              <li><a href="services.html#reparation-smartphones">Réparation de Smartphones</a></li>
-              <li><a href="services.html#reparation-tablettes">iPad & Tablettes tactiles</a></li>
-              <li><a href="services.html#depannage-informatique">Dépannage Informatique & PC</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <a href="accessoires.html">Boutique & Accessoires <svg class="dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-            <ul class="dropdown-menu">
-              <li><a href="accessoires.html#catalogue-accessoires">Nos gammes d'accessoires</a></li>
-              <li><a href="accessoires.html#avantages-boutique">Avantages d'acheter en boutique</a></li>
-            </ul>
-          </li>
-
-          <li><a href="devis.html">Tarifs & Devis</a></li>
-          <li><a href="contact.html">Contact & Accès</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-cta-group">
-        <a href="tel:0637981388" class="btn btn-accent btn-sm header-call-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          06 37 98 13 88
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo" title="PROXI-PHONE Vitré - Accueil">
+          <img src="assets/logo/logo-compact-horizontal.png" alt="PROXI-PHONE Vitré - Réparation Mobiles & PC" class="logo-header-img" width="419" height="163" fetchpriority="high">
         </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
+
+        <nav class="main-nav">
+          <ul class="nav-links">
+            <li class="nav-item has-dropdown">
+              <a href="index.html" class="nav-link">
+                <span>Accueil</span>
+                <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Vue d'ensemble</span></a></li>
+                <li><a href="index.html#pannes-courantes" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Pannes les plus courantes</span></a></li>
+                <li><a href="index.html#pourquoi-proxi-phone" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span>Pourquoi confier votre appareil</span></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item has-dropdown">
+              <a href="services.html" class="nav-link">
+                <span>Services & Réparations</span>
+                <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="services.html" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><span>Tous nos services</span></a></li>
+                <li><a href="services.html#reparation-smartphones" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg><span>Réparation Smartphone</span></a></li>
+                <li><a href="services.html#reparation-tablettes" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg><span>Réparation iPad & Tablettes Android</span></a></li>
+                <li><a href="services.html#depannage-informatique" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg><span>Dépannage Informatique (PC & Mac)</span></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item has-dropdown">
+              <a href="accessoires.html" class="nav-link">
+                <span>Boutique & Accessoires</span>
+                <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="accessoires.html" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span>Boutique en magasin</span></a></li>
+                <li><a href="accessoires.html#gammes-accessoires" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg><span>Nos gammes d'accessoires disponibles</span></a></li>
+                <li><a href="accessoires.html#avantages-boutique" class="dropdown-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><span>L'avantage d'acheter en boutique à Vitré</span></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a href="devis.html" class="nav-link">Tarifs & Devis</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact & Accès</a></li>
+          </ul>
+
+          <div class="header-cta-group">
+            <a href="tel:0637981388" class="btn btn-accent btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>06 37 98 13 88</span>
+            </a>
+            <button class="menu-toggle" aria-label="Menu principal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
 
-  <!-- BANNIÈRE HERO -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Fil d'ariane">
-        <a href="index.html">Accueil</a> &rsaquo; <span>Mentions Légales & Confidentialité</span>
-      </nav>
-      <h1 class="page-title">Mentions Légales & Politique de Confidentialité</h1>
-      <p class="page-subtitle">Informations juridiques de la société PROXI-PHONE SAS et protection de vos données personnelles (RGPD).</p>
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Mentions Légales & Confidentialité</span>
+      </div>
+      <h1>Mentions Légales & Politique de Confidentialité</h1>
+      <p>Informations juridiques de la société PROXI-PHONE SAS et protection de vos données personnelles (RGPD).</p>
     </div>
   </section>
 
